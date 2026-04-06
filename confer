@@ -1,0 +1,21 @@
+class ConferenceEventBuilder implements EventBuilder {
+    private Event event;
+
+    public void reset() {
+        event = new Event();
+    }
+
+    public void buildBasicInfo() {
+        event.setName("Conferencia Tech");
+        event.setDate("10/10/2026");
+        event.setLocation("Centro de Convenciones");
+    }
+
+    public void buildTypeDetails() {
+        event.setTypeDetail("Ponencias, networking, speakers internacionales");
+    }
+
+    public Event getResult() {
+        return event;
+    }
+}

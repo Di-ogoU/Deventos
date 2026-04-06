@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+
+        EventDirector director = new EventDirector();
+
+        // Evento de conferencia
+        EventBuilder conferenceBuilder = new ConferenceEventBuilder();
+        director.setBuilder(conferenceBuilder);
+        director.buildEvent();
+        Event conference = conferenceBuilder.getResult();
+        conference.showInfo();
+
+        // Evento deportivo
+        EventBuilder sportBuilder = new SportEventBuilder();
+        director.setBuilder(sportBuilder);
+        director.buildEvent();
+        Event sportEvent = sportBuilder.getResult();
+        sportEvent.showInfo();
+    }
+}

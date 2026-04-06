@@ -1,0 +1,6 @@
+interface EventBuilder {
+    void reset();
+    void buildBasicInfo();
+    void buildTypeDetails();
+    Event getResult();
+}

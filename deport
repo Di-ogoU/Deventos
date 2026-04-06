@@ -1,0 +1,21 @@
+class SportEventBuilder implements EventBuilder {
+    private Event event;
+
+    public void reset() {
+        event = new Event();
+    }
+
+    public void buildBasicInfo() {
+        event.setName("Final de Fútbol");
+        event.setDate("20/11/2026");
+        event.setLocation("Estadio Nacional");
+    }
+
+    public void buildTypeDetails() {
+        event.setTypeDetail("Competencia deportiva, equipos, marcador en vivo");
+    }
+
+    public Event getResult() {
+        return event;
+    }
+}

@@ -1,0 +1,13 @@
+class EventDirector {
+    private EventBuilder builder;
+
+    public void setBuilder(EventBuilder builder) {
+        this.builder = builder;
+    }
+
+    public void buildEvent() {
+        builder.reset();
+        builder.buildBasicInfo();
+        builder.buildTypeDetails();
+    }
+}
